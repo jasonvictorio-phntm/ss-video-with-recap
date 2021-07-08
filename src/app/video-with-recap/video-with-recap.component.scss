@@ -1,0 +1,53 @@
+.video-with-recap {
+  margin-top: 10vh;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1295px;
+  position: relative;
+}
+
+.video {
+  height: 736px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.recap {
+  z-index: -1;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.recap-copy {
+  font-size: 60px;
+  line-height: 1.333;
+  letter-spacing: -0.5px;
+  color: #202124;
+
+  a {
+    padding: 0 15px;
+  }
+}
+
+.recap-ctas {
+  margin-top: 135px;
+}
+
+.recap-cta {
+  font-size: 28px;
+  color: #3c4043;
+  padding: 20px 35px;
+
+  &:not(:first-of-type) {
+    margin-left: 23px;
+  }
+}

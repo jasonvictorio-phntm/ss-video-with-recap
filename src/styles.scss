@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  font-family:'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #f1f3f4;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+
+  &:visited,
+  &:hover,
+  &:active,
+  &:focus {
+    color: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+
+
+
+.pill {
+  background-color: #ffffff;
+  border-radius: 36px;
+  border: 1px solid #bdc1c6;
+  box-shadow: 0 30px 80px 0 rgba(32, 33, 36, 0.2);
+  text-decoration: none;
+}
