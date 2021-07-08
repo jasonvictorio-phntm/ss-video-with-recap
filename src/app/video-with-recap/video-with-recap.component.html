@@ -1,4 +1,11 @@
-<div class="video-with-recap">
+<div class="video-with-recap" [ngClass]="style">
+  <div class="style-buttons">
+    <button type="button" (click)="changeStyle('style-1')">style 1</button>
+    <button type="button" (click)="changeStyle('style-2')">style 2</button>
+    <button type="button" (click)="changeStyle('style-3')">style 3</button>
+    <button type="button" (click)="changeStyle('style-4')">style 4</button>
+  </div>
+
   <div class="container">
     <div
       class="video"

@@ -52,3 +52,19 @@
     margin-left: 23px;
   }
 }
+
+.style-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

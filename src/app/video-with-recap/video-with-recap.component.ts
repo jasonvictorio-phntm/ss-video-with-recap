@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class VideoWithRecapComponent {
   isRecapVisible: boolean = false;
+  style: string = 'style-1';
 
   toggleRecap() {
     this.isRecapVisible = !this.isRecapVisible;
@@ -14,5 +15,10 @@ export class VideoWithRecapComponent {
 
   hideRecap() {
     this.isRecapVisible = false;
+  }
+
+  changeStyle(style: string) {
+    this.style = style;
+    console.log(this.style);
   }
 }
