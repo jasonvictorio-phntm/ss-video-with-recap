@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-video-with-recap',
   templateUrl: './video-with-recap.component.html',
-  styleUrls: ['./video-with-recap.component.scss']
+  styleUrls: ['./video-with-recap.component.scss'],
 })
-export class VideoWithRecapComponent implements OnInit {
+export class VideoWithRecapComponent {
+  isRecapVisible: boolean = false;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  toggleRecap() {
+    this.isRecapVisible = !this.isRecapVisible;
   }
 
+  hideRecap() {
+    this.isRecapVisible = false;
+  }
 }

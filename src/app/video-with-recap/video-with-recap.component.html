@@ -1,6 +1,10 @@
 <div class="video-with-recap">
   <div class="container">
-    <div class="video">
+    <div
+      class="video"
+      (click)="toggleRecap()"
+      [ngClass]="{ active: !isRecapVisible }"
+    >
       <img src="/assets/video-placeholder.jpg" alt="" srcset="" />
     </div>
     <div class="recap">
@@ -11,8 +15,10 @@
         nulla, odio pariatur facere omnis ex aspernatur saepe?
       </p>
       <div class="recap-ctas">
-        <button class="recap-cta pill">Replay</button>
-        <button class="recap-cta pill">Explore more stories</button>
+        <button class="recap-cta pill" type="button">Replay</button>
+        <button class="recap-cta pill" type="button" (click)="hideRecap()">
+          Explore more stories
+        </button>
       </div>
     </div>
   </div>
