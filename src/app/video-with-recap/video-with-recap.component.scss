@@ -6,6 +6,9 @@
   margin: 0 auto;
   max-width: 1295px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .video {
@@ -24,9 +27,6 @@
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .recap-copy {
