@@ -14,7 +14,7 @@
     >
       <img src="/assets/video-placeholder.jpg" alt="" srcset="" />
     </div>
-    <div class="recap">
+    <div class="recap" [ngClass]="{ active: isRecapVisible }">
       <p class="recap-copy">
         Lorem ipsum dolor sit amet
         <a href="" class="pill">consectetur adipisicing elit.</a> Tempore optio
@@ -22,8 +22,10 @@
         nulla, odio pariatur facere omnis ex aspernatur saepe?
       </p>
       <div class="recap-ctas">
-        <button class="recap-cta pill" type="button">Replay</button>
         <button class="recap-cta pill" type="button" (click)="hideRecap()">
+          Replay
+        </button>
+        <button class="recap-cta pill" type="button">
           Explore more stories
         </button>
       </div>

@@ -13,10 +13,11 @@
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
+  z-index: 10;
+  position:relative;
 }
 
 .recap {
-  z-index: -1;
   width: 100%;
   max-width: 1100px;
   display: flex;
@@ -61,7 +62,6 @@
   button {
     background-color: transparent;
     border: none;
-    cursor: pointer;
 
     &:hover {
       text-decoration: underline;

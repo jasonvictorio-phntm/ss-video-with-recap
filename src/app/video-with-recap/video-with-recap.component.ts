@@ -18,7 +18,7 @@ export class VideoWithRecapComponent {
   }
 
   changeStyle(style: string) {
+    this.isRecapVisible = false;
     this.style = style;
-    console.log(this.style);
   }
 }
