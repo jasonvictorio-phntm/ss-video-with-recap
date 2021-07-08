@@ -1,9 +1,13 @@
 <div class="video-with-recap" [ngClass]="style">
   <div class="style-buttons">
-    <button type="button" (click)="changeStyle('style-1')">style 1</button>
-    <button type="button" (click)="changeStyle('style-2')">style 2</button>
-    <button type="button" (click)="changeStyle('style-3')">style 3</button>
-    <button type="button" (click)="changeStyle('style-4')">style 4</button>
+    <button
+      type="button"
+      *ngFor="let s of styles"
+      (click)="changeStyle(s)"
+      [ngClass]="{ active: style === s }"
+    >
+      {{ s }}
+    </button>
   </div>
 
   <div class="container">

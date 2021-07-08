@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class VideoWithRecapComponent {
   isRecapVisible: boolean = false;
   style: string = 'style-1';
+  styles: string[] = ['style-1', 'style-2', 'style-3', 'style-4'];
 
   toggleRecap() {
     this.isRecapVisible = !this.isRecapVisible;
