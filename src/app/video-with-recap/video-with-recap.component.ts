@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-video-with-recap',
@@ -6,8 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./video-with-recap.component.scss'],
 })
 export class VideoWithRecapComponent {
+  @Input() style: string = 'style-1';
+  @Input() showStyleSelector: boolean = false;
+
   isRecapVisible: boolean = false;
-  style: string = 'style-1';
   styles: string[] = ['style-1', 'style-2', 'style-3', 'style-4'];
 
   toggleRecap() {

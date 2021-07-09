@@ -1,5 +1,5 @@
 <div class="video-with-recap" [ngClass]="style">
-  <div class="style-buttons">
+  <div class="style-buttons" *ngIf="showStyleSelector">
     <button
       type="button"
       *ngFor="let s of styles"
