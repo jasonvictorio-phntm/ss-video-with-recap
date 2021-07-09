@@ -1,9 +1,12 @@
+$ease-in-out: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+$transition-speed: 800ms;
+
 .style-1 {
   // video slide left
   // recap zoom in
   .video {
     transform: translateX(-100%);
-    transition: all 800ms cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    transition: all $transition-speed $ease-in-out;
 
     &.active {
       transform: translateX(0%);
@@ -11,14 +14,16 @@
   }
 
   .recap {
-    opacity: 0;
+    opacity: 0.3;
     transform: scale(0.8);
-    transition: all 800ms cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    transition: all $transition-speed $ease-in-out;
 
     &.active {
       opacity: 1;
       transform: scale(1);
-      transition-delay: 150ms;
+      transition-property: all, scale;
+      transition-duration: $transition-speed, 650ms;
+      transition-delay: 0, 150ms;
     }
   }
 }
@@ -34,10 +39,15 @@
     opacity: 0.3;
     transform: scale(0.8);
 
-    transition-duration: 800ms, 800ms, 0s;
-    transition-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    transition-duration: $transition-speed, $transition-speed, 0s;
+    transition-timing-function: $ease-in-out;
     transition-property: all, border-radius, z-index;
-    transition-delay: 0s, 300ms, 800ms;
+    transition-delay: 0s, 300ms, $transition-speed;
+
+    img {
+      transform: scale(2);
+      transition: all $transition-speed ease-in-out;
+    }
 
     &.active {
       width: 1295px;
@@ -46,6 +56,10 @@
       opacity: 1;
       transform: scale(1);
       transition-delay: 0s, 0s;
+
+      img {
+        transform: scale(1);
+      }
     }
   }
 
@@ -53,7 +67,7 @@
     opacity: 0;
     visibility: hidden;
     transform: translateX(9%);
-    transition: all 800ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    transition: all $transition-speed $ease-in-out;
 
     &.active {
       opacity: 1;
@@ -63,6 +77,37 @@
   }
 }
 
+.style-3 {
+  .video {
+    transform: translateX(-100%);
+    transition: all $transition-speed ease-in-out;
+
+    img {
+      transform: scale(1.5);
+      transition: all 400ms $ease-in-out;
+    }
+
+    &.active {
+      transform: translateX(0%);
+
+      img {
+        transform: scale(1);
+        transition-delay: 400ms;
+      }
+    }
+  }
+
+  .recap {
+    transform: translateX(-9%);
+    opacity: 0;
+    transition: all 400ms $ease-in-out 300ms;
+
+    &.active {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+}
 
 .video-with-recap {
   margin-top: 10vh;
@@ -84,7 +129,7 @@
   overflow: hidden;
   cursor: pointer;
   z-index: 10;
-  position:relative;
+  position: relative;
 
   img {
     position: absolute;
